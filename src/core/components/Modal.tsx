@@ -1,6 +1,8 @@
 import { MouseEvent, JSX, useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
 import { CloseIcon } from "./icons";
+import { Button } from "@heroui/button";
+import { motion } from "framer-motion";
 
 interface Props {
   children: JSX.Element;
@@ -45,7 +47,10 @@ export default function Modal({
   }
 
   return createPortal(
-    <div
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.2 }}
       ref={modalRef}
       aria-modal
       role="dialog"
@@ -55,19 +60,23 @@ export default function Modal({
         onClick={handleContentClick}
         className="z-50 bg-white dark:bg-zinc-800 rounded-xl relative"
       >
-        <div className="min-w-[100px] min-h-[50px] p-4 grid place-content-center">
+        <div className="min-w-[100px] min-h-[50px] p-8 grid place-content-center">
           {!hiddenButtonClose && (
-            <button
-              onClick={closeModal}
-              className="absolute top-2 left-2 bg-rose-600 p-1 rounded-full"
+            <Button
+              size="sm"
+              color="danger"
+              radius="full"
+              isIconOnly
+              onPress={closeModal}
+              className="absolute top-2 left-2"
             >
               <CloseIcon />
-            </button>
+            </Button>
           )}
           {children}
         </div>
       </div>
-    </div>,
+    </motion.div>,
     modalRoot
   );
 }

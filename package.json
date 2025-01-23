@@ -11,6 +11,7 @@
    },
    "dependencies": {
       "@heroui/button": "2.2.10",
+      "@heroui/chip": "^2.2.7",
       "@heroui/image": "2.2.6",
       "@heroui/input": "2.4.10",
       "@heroui/input-otp": "^2.1.9",
@@ -18,7 +19,9 @@
       "@heroui/popover": "2.3.10",
       "@heroui/progress": "2.2.7",
       "@heroui/system": "2.4.7",
+      "@heroui/table": "^2.2.9",
       "@heroui/theme": "2.4.6",
+      "@heroui/tooltip": "^2.2.8",
       "@hookform/resolvers": "3.10.0",
       "@supabase/supabase-js": "2.47.12",
       "framer-motion": "^11.16.1",

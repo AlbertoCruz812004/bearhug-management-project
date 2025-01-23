@@ -27,7 +27,7 @@ export const OptionCompany = ({
       initial={{ scale: 0 }}
       animate={{ scale: 1 }}
       transition={{ duration: 0.7, delay: 0.4 }}
-      className="grid max-w-[450px] p-8 bg-zinc-800 rounded-lg gap-4"
+      className="grid max-w-[450px] p-8 border-2 border-black dark:bg-zinc-800 rounded-lg gap-4"
     >
       <div>
         <h5 className="flex gap-2 text-xl font-bold">
