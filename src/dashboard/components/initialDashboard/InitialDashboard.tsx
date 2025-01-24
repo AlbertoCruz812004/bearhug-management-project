@@ -1,9 +1,21 @@
+import { Bar, DarkModeButton } from "../../../core/components";
 import { OptionCompany, InvitationFromCompany } from "./components/";
 import { BuildingIcon, AddIcon } from "./icon/";
+import image from "./../../../../public/logo.png";
+import { User } from "@heroui/user";
 
 export const InitialDashboard = () => {
   return (
-    <section className="p-4">
+    <section>
+      <Bar image={image}>
+        <User
+          avatarProps={{
+            src: "https://unavatar.io/github/mdo",
+          }}
+          description="Nuevo usuario"
+          name="La bestia"
+        />
+      </Bar>
       <h4 className="text-3xl text-center font-bold">Bienvenido</h4>
       <article>
         <div className="w-full flex gap-16 justify-center mt-10">
