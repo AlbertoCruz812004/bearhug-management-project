@@ -1,7 +1,6 @@
-import { useState } from "react";
-import Modal from "../core/components/Modal";
+import Modal from "../../core/components/Modal";
 import { Button } from "@heroui/button";
-import { ExclamationIcon } from "./icons/ExclamationIcon";
+import { ExclamationIcon } from "./../icons/";
 
 export const AlertInventory = ({
   isOpen,

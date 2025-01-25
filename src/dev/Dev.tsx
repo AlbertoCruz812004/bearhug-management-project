@@ -1,26 +1,51 @@
 import { useState } from "react";
-import { Notifications } from "./components/Notifications";
-import { ExclamationIcon, EyeIcon } from "./icons";
+import { ToolBar } from "../dashboard/components/ToolBar";
 //import { AlertInventory } from "./AlertInventory";
 
 export default function Dev() {
-  const [state, setState] = useState(false);
-
   return (
     <div>
-      <button onClick={() => setState(!state)}>ddd</button>
+      <ToolBar />
+      {/* <Button onPress={() => setState(!state)} isIconOnly color="warning">
+        <NotifyIcon />
+      </Button> */}
       {/* <AlertInventory isOpen={state} setIsOpen={() => setState(!state)} /> */}
       {/* <ListProductAlert /> */}
-      <Notifications
+      {/* <Notifications
+        positionNotification="top-left"
+        sizeButton="sm"
         contentButton={<EyeIcon />}
         isIconOnly
-        colorButton="danger"
+        colorButton="primary"
       >
         <div className="flex items-center text-sm gap-2">
           <ExclamationIcon />
           Tienes inventario bajo
         </div>
       </Notifications>
+      <Notifications
+        positionNotification="top-left"
+        sizeButton="sm"
+        contentButton={<TrashIcon />}
+        isIconOnly
+        colorButton="danger"
+      >
+        <div className="flex items-center text-sm gap-2">
+          <TrashIcon />
+          Producto Eliminado
+        </div>
+      </Notifications>
+      <Notifications
+        positionNotification="top-left"
+        contentButton={<CheckIcon />}
+        isIconOnly
+        colorButton="default"
+      >
+        <div className="flex items-center text-sm gap-2">
+          <CheckIcon />
+          Producto agregado
+        </div>
+      </Notifications> */}
     </div>
   );
 }

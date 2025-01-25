@@ -1,7 +1,6 @@
 import { Key, useCallback, useState } from "react";
-import Modal from "../core/components/Modal";
+import Modal from "../../core/components/Modal";
 
-import { ExclamationIcon } from "./icons/ExclamationIcon";
 import {
   Table,
   TableBody,
@@ -12,7 +11,7 @@ import {
 } from "@heroui/table";
 import { Chip, ChipProps } from "@heroui/chip";
 import { Tooltip } from "@heroui/tooltip";
-import { EyeIcon, EditIcon, TrashIcon } from "./icons/";
+import { EyeIcon, EditIcon, TrashIcon, ExclamationIcon } from "./../icons/";
 
 interface Obj {
   key: string;

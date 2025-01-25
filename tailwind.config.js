@@ -12,6 +12,9 @@ export default {
       fontFamily: {
         sans: ["Poppins", "sans-serif"],
       },
+      colors: {
+        "pallete-blue": "#3d5af1",
+      },
     },
   },
   darkMode: "class",

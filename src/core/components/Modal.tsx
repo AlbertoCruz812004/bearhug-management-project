@@ -54,7 +54,7 @@ export default function Modal({
       ref={modalRef}
       aria-modal
       role="dialog"
-      className="absolute w-full h-full top-0 flex items-center justify-center bg-black/40"
+      className="absolute w-full h-full top-0 flex items-center justify-center bg-black/40 backdrop-blur-sm z-50"
     >
       <div
         onClick={handleContentClick}
