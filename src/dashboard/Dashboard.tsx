@@ -1,5 +1,4 @@
-import { InitialDashboard } from "./components/initialDashboard/InitialDashboard";
-import { ToolBar } from "./components/ToolBar";
+import { ToolBar, InitialDashboard } from "./components/";
 
 export default function Dashboard() {
   return (
