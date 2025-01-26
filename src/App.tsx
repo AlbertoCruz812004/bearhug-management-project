@@ -5,6 +5,7 @@ import AuthProvider from "./core/context/auth/AuthProvider.tsx";
 import Loading from "./core/components/Loading.tsx";
 import { ThemeProvider } from "./core/context/theme/ThemeProvider.tsx";
 import Dev from "./dev/Dev.tsx";
+import NotFound from "./NotFound.tsx";
 
 const Login = lazy(() => import("./auth/Login.tsx"));
 const SignUp = lazy(() => import("./auth/SignUp.tsx"));
@@ -29,6 +30,7 @@ export default function App() {
               <Route path="reset-password" element={<ResetPassword />} />
             </Route>
             <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </AuthProvider>
       </Suspense>
