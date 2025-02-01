@@ -1,7 +1,8 @@
 import { InvitationFromCompany } from "./form/InvitationFromCompany";
 import { OptionCompany } from "./OptionCompany";
 import career from "./../images/Career.png";
-import asynchronousWork from "./../images/Career.png";
+import asynchronousWork from "./../images/Asynchronous_Work.png";
+import { CreateCompanyForm } from "./form/create-company-form/CreateCompanyForm";
 
 export const OptionsCompanyGroup = () => {
   return (
@@ -11,7 +12,7 @@ export const OptionsCompanyGroup = () => {
         title="Crear empresa"
         description="Inicia tu propia empresa y gestiona tu equipo con nuestras herramientas avanzadas."
       >
-        <button>ddd</button>
+        <CreateCompanyForm />
       </OptionCompany>
       <OptionCompany
         image={asynchronousWork}

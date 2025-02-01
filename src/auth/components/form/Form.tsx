@@ -2,7 +2,7 @@ import { Button } from "@heroui/button";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { formSchema, FormValues } from "./model/form_schema.ts";
 import { zodResolver } from "@hookform/resolvers/zod";
-import InputForm from "../../../core/components/InputForm.tsx";
+import FormInput from "../../../core/components/input/InputForm.tsx";
 
 interface Props {
   service: (data: FormValues) => void;
@@ -27,7 +27,7 @@ export const Form = ({ service }: Props) => {
       onSubmit={handleSubmit(onSubmit)}
       className="w-[300px] grid mx-auto gap-3"
     >
-      <InputForm
+      <FormInput
         control={control}
         type="email"
         label="Email"
@@ -35,7 +35,7 @@ export const Form = ({ service }: Props) => {
         error={errors.email}
         placeholder="E-mail"
       />
-      <InputForm
+      <FormInput
         control={control}
         error={errors.password}
         type="password"
