@@ -1,7 +1,8 @@
 import { createContext, useContext } from "react";
+import {Session} from "@supabase/supabase-js";
 
 interface Props {
-  session: unknown;
+  session: Session | null;
 }
 
 type AuthContextValue = Props | null;
