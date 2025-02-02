@@ -3,6 +3,7 @@ import {lazy} from "react";
 import Home from "../home/Home.tsx";
 import Dev from "../dev/Dev.tsx";
 import NotFound from "../NotFound.tsx";
+import PrivateRoute from "./PrivateRoute.tsx";
 
 const Login = lazy(() => import("./../auth/Login.tsx"));
 const SignUp = lazy(() => import("./../auth/SignUp.tsx"));
@@ -22,6 +23,6 @@ export const routes: RouteObject[] = [
             {path: "reset-password", element: <ResetPassword/>},
         ],
     },
-    {path: "/dashboard", element: <Dashboard/>},
+    {path: "/dashboard", element: <PrivateRoute><Dashboard/></PrivateRoute>},
     {path: "*", element: <NotFound/>},
 ];

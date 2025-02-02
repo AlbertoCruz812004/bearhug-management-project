@@ -4,7 +4,12 @@ import {Navigate} from "react-router";
 
 const PrivateRoute = ({ children }: {children: ReactNode}) => {
     const { session } = useAuthContext();
-    return session?.user ? children : <Navigate to="/auth/login" />;
+
+    if(!session) {
+        return <Navigate to="/auth/login"/>
+    }
+
+    return children;
 };
 
 export default PrivateRoute;
