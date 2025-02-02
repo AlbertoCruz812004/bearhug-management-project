@@ -1,7 +1,7 @@
 import { ReactNode, useEffect, useState } from "react";
 import { AuthContext } from "./AuthContext";
-import { supabase } from "./../../services/supabase.service";
 import { useNavigate } from "react-router";
+import {SetupAuthListener} from "./setupAuthListener.ts";
 
 interface Props {
   children: ReactNode;
@@ -12,23 +12,7 @@ export default function AuthProvider({ children }: Props) {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const {
-      data: { subscription },
-    } = supabase.auth.onAuthStateChange((event, session) => {
-      console.log(event);
-      if (event === "SIGNED_IN") {
-        navigate("/dashboard");
-        setSession(session);
-        console.log("data session", session);
-      }
-
-      if (event === "SIGNED_OUT") {
-        navigate("/auth/login");
-        setSession(null);
-        console.log("data session", session);
-      }
-    });
-
+    const subscription = SetupAuthListener(setSession, navigate);
     return () => {
       subscription.unsubscribe();
     };

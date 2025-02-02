@@ -32,7 +32,7 @@ export const TableProduct = ({}: Props) => {
                     loadingContent={<CircularProgress label="Loading..."/>}
                 >
                     {(item) => (
-                        <TableRow key={crypto.randomUUID().toString()}>
+                        <TableRow key={item.barcode}>
                             {(columnKey) => <TableCell>{getKeyValue(item, columnKey)}</TableCell>}
                         </TableRow>
                     )}
