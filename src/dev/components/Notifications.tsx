@@ -1,8 +1,6 @@
 import toast from "react-hot-toast";
 import { NotificationBase } from "./NotificationBase";
 import {
-  NotificationButton,
-  NotificationToast,
   NotificationType,
 } from "../interfaces/notification-interface";
 

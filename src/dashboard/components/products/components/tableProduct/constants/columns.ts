@@ -1,6 +1,6 @@
 export const COLUMNS_PRODUCT = [
   {
-    key: "code",
+    key: "barcode",
     label: "CÓDIGO",
   },
   {
@@ -8,7 +8,7 @@ export const COLUMNS_PRODUCT = [
     label: "NOMBRE",
   },
   {
-    key: "cost",
+    key: "purchase_cost",
     label: "COSTO",
   },
   {
@@ -16,15 +16,7 @@ export const COLUMNS_PRODUCT = [
     label: "PRECIO",
   },
   {
-    key: "wholesalePrice",
-    label: "MAYOREO",
-  },
-  {
     key: "quantity",
     label: "EXISTENCIA",
-  },
-  {
-    key: "categoryId",
-    label: "DEPARTAMENTO",
   },
 ];

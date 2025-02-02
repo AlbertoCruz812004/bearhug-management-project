@@ -2,6 +2,7 @@ import { Tab, Tabs } from "@heroui/tabs";
 import { TableProduct } from "./components/tableProduct/TableProduct";
 
 export const Products = () => {
+
   return (
     <section className="p-4">
       <h5>Productos</h5>
