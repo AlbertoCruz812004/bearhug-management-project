@@ -1,4 +1,4 @@
-import { ToolBar } from "../dashboard/components/ToolBar";
+import { ToolBar } from "./../dashboard/components";
 //import { AlertInventory } from "./AlertInventory";
 
 export default function Dev() {
@@ -6,7 +6,7 @@ export default function Dev() {
     <div>
       <ToolBar />
       {/* <Button onPress={() => setState(!state)} isIconOnly color="warning">
-        <NotifyIcon />
+        <NotificationPending />
       </Button> */}
       {/* <AlertInventory isOpen={state} setIsOpen={() => setState(!state)} /> */}
       {/* <ListProductAlert /> */}

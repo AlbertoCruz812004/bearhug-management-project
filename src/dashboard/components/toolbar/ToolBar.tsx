@@ -1,10 +1,10 @@
-import { Bar } from "../../core/components";
-import image from "./../../../public/logo.png";
-import { NotifyIcon } from "../../dev/icons";
-import { OptionBar } from "../../dev/components/OptionBar";
+import { Bar } from "../../../core/components";
+import image from "./../../../../public/logo.png";
+import { OptionBar } from "../../../dev/components/OptionBar";
 import { useState } from "react";
 import { User } from "@heroui/user";
-import { UserOptions } from "./UserOptions";
+import { UserOptions } from "./../UserOptions";
+import {Notification} from "./components/notification/Notification.tsx";
 
 export const ToolBar = () => {
   const [state, setState] = useState(false);
@@ -13,7 +13,7 @@ export const ToolBar = () => {
     <Bar image={image}>
       <nav className="flex items-center gap-4">
         <OptionBar content={"dfsf"} onClick={handleClick}>
-          <NotifyIcon />
+          <Notification />
         </OptionBar>
         <OptionBar content={<UserOptions />} className="">
           <User

@@ -2,7 +2,7 @@ import { createContext, useContext } from "react";
 
 interface Props {
   isDarkTheme: boolean;
-  toogleTheme: () => void;
+  toggleTheme: () => void;
 }
 
 export const ThemeContext = createContext<Props | null>(null);

@@ -3,7 +3,7 @@ import { useThemeContext } from "../context/theme/ThemeContext";
 import { MoonIcon } from "./button/IconButton";
 
 export const SwitchDarkMode = () => {
-  const { isDarkTheme, toogleTheme } = useThemeContext();
+  const { isDarkTheme, toggleTheme } = useThemeContext();
 
   return (
     <div className="flex items-center gap-2 justify-between">
@@ -13,7 +13,7 @@ export const SwitchDarkMode = () => {
         size="sm"
         color="primary"
         isSelected={isDarkTheme}
-        onValueChange={toogleTheme}
+        onValueChange={toggleTheme}
       />
     </div>
   );

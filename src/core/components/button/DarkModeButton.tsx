@@ -3,10 +3,10 @@ import { MoonIcon, SunIcon } from "./IconButton.tsx";
 import { useThemeContext } from "../../context/theme/ThemeContext.ts";
 
 export const DarkModeButton = () => {
-  const { isDarkTheme, toogleTheme } = useThemeContext();
+  const { isDarkTheme, toggleTheme } = useThemeContext();
 
   return (
-    <Button size="sm" isIconOnly color="primary" onPress={toogleTheme}>
+    <Button size="sm" isIconOnly color="primary" onPress={toggleTheme}>
       {isDarkTheme ? <MoonIcon /> : <SunIcon />}
     </Button>
   );

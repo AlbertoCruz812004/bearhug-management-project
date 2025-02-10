@@ -1,3 +1,2 @@
-export * from "./ToolBar";
+export * from "./toolbar/ToolBar";
 export * from "./UserOptions";
-export * from "./initialDashboard/InitialDashboard";

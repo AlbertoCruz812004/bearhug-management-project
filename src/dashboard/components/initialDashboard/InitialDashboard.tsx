@@ -3,9 +3,9 @@ import chart from "./images/Chart.png";
 import { OptionsCompanyGroup, Footer } from "./components/";
 import { motion } from "framer-motion";
 
-export const InitialDashboard = () => {
+export default function InitialDashboard() {
   return (
-    <section className="flex px-4 items-center mt-3">
+    <section className="flex px-8 items-center pt-5">
       <article>
         <h4 className="text-lg w-2/3 text-center mx-auto font-bold">
           ¿Listo para tu próximo gran proyecto? Elige tu camino: crea un negocio

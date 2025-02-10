@@ -11,6 +11,7 @@ const ResetPassword = lazy(
     () => import("./../auth/resetPassword/ResetPassword.tsx")
 );
 const Dashboard = lazy(() => import("./../dashboard/Dashboard.tsx"));
+const InitialDashboard = lazy(() => import("./../dashboard/components/initialDashboard/InitialDashboard.tsx"));
 
 export const routes: RouteObject[] = [
     {path: "/", element: <Home/>},
@@ -18,11 +19,17 @@ export const routes: RouteObject[] = [
     {
         path: "/auth",
         children: [
-            {path: "login", element: <Login/>},
+            {path: "login", element: <Login/>, index: true},
             {path: "signup", element: <SignUp/>},
             {path: "reset-password", element: <ResetPassword/>},
         ],
     },
-    {path: "/dashboard", element: <PrivateRoute><Dashboard/></PrivateRoute>},
+    {
+        path: "/app",
+        children: [
+            {path: "initial", element: <PrivateRoute><InitialDashboard/></PrivateRoute>},
+            {path: "dashboard", element: <PrivateRoute><Dashboard/></PrivateRoute>},
+        ]
+    },
     {path: "*", element: <NotFound/>},
 ];

@@ -1,19 +1,13 @@
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
+import {createRoot} from "react-dom/client";
 import "./index.css";
 import App from "./App.tsx";
-import { BrowserRouter } from "react-router";
-import { HeroUIProvider } from "@heroui/system";
-import ModalProvider from "./core/context/modal/ModalProvider.tsx";
+import {BrowserRouter} from "react-router";
+import {HeroUIProvider} from "@heroui/system";
 
 createRoot(document.getElementById("root")!).render(
-  <StrictMode>
     <BrowserRouter>
-      <HeroUIProvider>
-        <ModalProvider>
-          <App />
-        </ModalProvider>
-      </HeroUIProvider>
+        <HeroUIProvider>
+            <App/>
+        </HeroUIProvider>
     </BrowserRouter>
-  </StrictMode>
 );

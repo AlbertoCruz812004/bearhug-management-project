@@ -1,4 +1,4 @@
-export const NotifyIcon = () => {
+export const NotificationPending = () => {
   return (
     <svg
       width={24}
