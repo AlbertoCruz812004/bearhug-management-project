@@ -7,7 +7,7 @@ interface Props {
 
 export const Bar = ({ image, children }: Props) => {
   return (
-    <header className="h-[10svh] flex items-center justify-between px-3 border-b-2 border-gray-300">
+    <header className="h-[10svh] flex items-center justify-between px-3 bg-black">
       <figure className="flex items-center gap-2">
         <img
           src={image}

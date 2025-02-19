@@ -15,6 +15,9 @@ export default {
       colors: {
         "pallete-blue": "#3d5af1",
       },
+      gridTemplateColumns: {
+        'slice': "200px 1fr"
+      }
     },
   },
   darkMode: "class",
