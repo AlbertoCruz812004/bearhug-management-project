@@ -10,7 +10,7 @@ interface Props {
 export default function Header({ logo }: Props) {
   return (
     <header>
-      <Bar image={logo}>
+      <Bar isFixed image={logo}>
         <DarkModeButton />
       </Bar>
       <HeroImage image={image} />

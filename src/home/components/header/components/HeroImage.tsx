@@ -9,7 +9,7 @@ interface Props {
 
 export default function HeroImage({ image }: Props) {
   return (
-    <main className="h-[90svh] flex justify-center items-center px-10 md:pt-8 gap-12">
+    <main className="h-[90svh] mt-[10svh] flex justify-center items-center px-10 md:pt-8 gap-12">
       <Wave />
       <article className="w-[500px] text-center space-y-6">
         <motion.h1
