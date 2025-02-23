@@ -22,7 +22,7 @@ export const Bar = ({ image, children, isFixed }: Props) => {
           height={50}
         />
         <p className="hidden text-white lg:inline font-bold">
-          Bearhug Management
+          BearHugManagement
         </p>
       </figure>
       <div className="flex items-center gap-2">{children}</div>
