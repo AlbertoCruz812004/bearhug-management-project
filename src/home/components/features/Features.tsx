@@ -20,8 +20,7 @@ export const Features = () => {
       bg="bg-gradient-pallet"
       textColor="text-white"
       title="¿Por qué elegir nuestro Gestor de Almacenes en la Nube?"
-      description="Si aun no estas convencido, te mostramos los beneficios que obtendria
-          tu negocio si te decides por nosotros"
+      description="Si aún no estás convencido, te mostramos los beneficios que obtendría tu negocio si te decides por nosotros."
     >
       <motion.div
         className="flex flex-wrap justify-center gap-10"

@@ -22,7 +22,7 @@ export default function HeroImage({ image }: Props) {
             delay: 0.4,
           }}
         >
-          Bienvenido a BEARHUG el mejor gestor de almacenes en la nube
+          Bienvenido a BearHug, el mejor gestor de almacenes en la nube
         </motion.h1>
         <motion.p
           className="text-lg"
@@ -55,7 +55,7 @@ export default function HeroImage({ image }: Props) {
             color="primary"
             className="w-[150px]"
           >
-            Registrate ahora
+            Regístrate ahora
           </Button>
 
           <Button
