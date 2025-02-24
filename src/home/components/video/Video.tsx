@@ -1,5 +1,5 @@
 import SectionContainer from "../../layout/SectionContainer";
-import image from "./image/hero-image.jpg";
+import image from "./image/mockup2.png";
 
 export const Video = () => {
   return (
