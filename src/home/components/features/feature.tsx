@@ -1,7 +1,7 @@
 const FEATURE_SECURITY = {
   title: "Seguridad en línea",
   description:
-    "Utilizamos el más alto nivel de seguridad en línea, cifrando toda tu para garantizar que tus datos estén protegidos.",
+    "Utilizamos el más alto nivel de seguridad en línea, cifrando toda tu información para garantizar que tus datos estén protegidos.",
 };
 
 const FEATURE_ACCESS = {
@@ -11,7 +11,7 @@ const FEATURE_ACCESS = {
 };
 
 const FEATURE_FILE = {
-  title: "Sin pérdidas de datos",
+  title: "Sin pérdida de datos",
   description:
     "Nunca más perderás información importante debido a fallos locales. Nuestro servicio de almacenamiento en la nube te respalda.",
 };

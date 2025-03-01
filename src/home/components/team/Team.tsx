@@ -17,7 +17,7 @@ export const Team = () => {
   return (
     <SectionContainer
       title="Nuestro equipo"
-      description="En Bearhug Management, nuestro éxito depende del talento y la pasión de nuestro equipo, quienes con su experiencia e innovación ofrecen soluciones excepcionales. Conoce a quienes lo hacen posible."
+      description="En BearHugManagement, nuestro éxito depende del talento y la pasión de nuestro equipo, quienes, con su experiencia e innovación, ofrecen soluciones excepcionales. Conoce a quienes lo hacen posible."
     >
       <motion.div
         className="flex flex-wrap justify-around"
