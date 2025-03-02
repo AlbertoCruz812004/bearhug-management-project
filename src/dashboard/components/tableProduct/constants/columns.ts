@@ -8,15 +8,19 @@ export const COLUMNS_PRODUCT = [
     label: "NOMBRE",
   },
   {
-    key: "purchase_cost",
+    key: "price_cost",
     label: "COSTO",
   },
   {
-    key: "price",
+    key: "sales_price",
     label: "PRECIO",
   },
   {
-    key: "quantity",
+    key: "wholesale_price",
+    label: "MAYOREO"
+  },
+  {
+    key: "quantity_in_stock",
     label: "EXISTENCIA",
   },
 ];

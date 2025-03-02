@@ -31,7 +31,6 @@ export default function FormInput({
           />
         )}
       />
-      {error && <p className="text-sm mt-2 text-pink-600">{error.message}</p>}
     </div>
   );
 }

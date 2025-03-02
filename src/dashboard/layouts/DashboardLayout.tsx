@@ -6,7 +6,7 @@ interface Props {
 
 export const DashboardLayout = ({ children }: Props) => {
   return (
-    <main className="grid grid-cols-slice ">
+    <main className="p-3">
       {children}
     </main>
   )

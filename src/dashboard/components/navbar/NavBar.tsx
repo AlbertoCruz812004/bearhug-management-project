@@ -3,17 +3,19 @@ import { options } from "./options"
 
 export const NavBar = () => {
   return (
-    <nav className="flex flex-col items-center py-5">
+    <nav className="py-5">
       <Tabs
         aria-label="Options"
         isVertical
-        classNames={{ tabList: "grid gap-9" }}
+        classNames={{ tabList: "grid gap-6 py-5 px-2" }}
         radius="lg"
         color="primary"
       >
         {
           options.map(item => (
-            <Tab {...item} />
+            <Tab key={item.key} title={item.title}>
+              {item.element}
+            </Tab>
           ))
         }
       </Tabs>

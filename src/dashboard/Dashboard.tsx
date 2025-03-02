@@ -1,7 +1,6 @@
 import { ToolBar } from "./components/";
-import { Products } from "./components/products/Products.tsx";
 import { DashboardLayout } from "./layouts/DashboardLayout.tsx";
-import { NavBar } from "./navbar/NavBar.tsx";
+import { NavBar } from "./components/navbar/NavBar.tsx";
 
 export default function Dashboard() {
   return (
@@ -9,7 +8,6 @@ export default function Dashboard() {
       <ToolBar />
       <DashboardLayout>
         <NavBar />
-        <Products />
       </DashboardLayout>
     </>
   );

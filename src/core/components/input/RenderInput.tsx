@@ -18,6 +18,7 @@ export const RenderInput = ({
 }: InputProps) => (
   <Input
     isInvalid={!!error}
+    errorMessage={error?.message}
     {...field}
     type={type}
     labelPlacement="outside"
