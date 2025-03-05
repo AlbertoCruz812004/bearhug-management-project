@@ -1,29 +1,27 @@
-import { COLUMNS_PRODUCT } from "./constants/columns.ts";
 import { useAsyncList } from "@react-stately/data";
 import { Key, ReactNode, useState } from "react";
 import { loadData, sortData } from "./logic/sortTable.ts";
 import { RenderTable } from "./component/RenderTable.tsx";
-import { Product } from "../../types/product.ts";
 
-interface props {
-  fetchDataQuery: () => Promise<any>
-  renderCell?: (columnKey: Key, cellValue: any) => ReactNode
+interface props<T> {
+  fetchDataQuery: () => Promise<unknown>
+  renderCell?: (columnKey: Key, cellValue: unknown) => ReactNode
+  columns: Array<{key: string, label: string}>
 };
 
-export const TableProduct = ({ fetchDataQuery, renderCell }: props) => {
+export const TableProduct = <T,>({ fetchDataQuery, renderCell, columns }: props<T>) => {
   const [isLoading, setIsLoading] = useState(true);
 
-  let asyncListProduct = useAsyncList<Product>({
+  const asyncListProduct = useAsyncList<T>({
     async load() {
       return await loadData(setIsLoading, fetchDataQuery); // Devuelve el objeto con `items` como un array
     },
-    sort: sortData<Product>
+    sort: sortData<T>
   });
-
 
   return (
     <div>
-      <RenderTable columns={COLUMNS_PRODUCT} useAsyncList={asyncListProduct} isLoading={isLoading} renderCell={renderCell} />
+      <RenderTable columns={columns} useAsyncList={asyncListProduct} isLoading={isLoading} renderCell={renderCell} />
     </div>
   )
 

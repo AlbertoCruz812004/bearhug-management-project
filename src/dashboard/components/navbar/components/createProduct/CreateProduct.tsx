@@ -6,24 +6,25 @@ import { Button } from "@heroui/button";
 import CheckboxForm from "../../../../../core/components/checkboxForm/CheckboxForm";
 
 export const CreateProduct = () => {
-  const {
-    control,
-    handleSubmit,
-    formState: { errors },
-  } = useForm<ProductValues>({ resolver: zodResolver(productSchema) });
+  const { control, handleSubmit, formState: { errors } } = useForm<
+    ProductValues
+  >({ resolver: zodResolver(productSchema) });
 
-  const onSubmit: SubmitHandler<ProductValues> = (data) => {
+  const onSubmit: SubmitHandler<ProductValues> = data => {
     console.log(data);
-  }
+  };
 
   const options = [
     { value: "unit", text: "por unidad" },
     { value: "grammage", text: "por gramos" },
-    { value: "kit", text: "por kit" },
-  ]
+    { value: "kit", text: "por kit" }
+  ];
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="min-w-[600px] p-8 grid gap-5 max-h-[500px] overflow-y-auto scrollbar-hide">
+    <form
+      onSubmit={handleSubmit(onSubmit)}
+      className="min-w-[600px] p-8 grid gap-5 max-h-[500px] overflow-y-auto scrollbar-hide"
+    >
       <FormInput
         control={control}
         name="code"
@@ -89,6 +90,5 @@ export const CreateProduct = () => {
       />
       <Button type="submit">Guardar</Button>
     </form>
-  )
-}
-
+  );
+};

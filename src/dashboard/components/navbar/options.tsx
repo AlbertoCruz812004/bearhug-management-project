@@ -1,7 +1,15 @@
+import { Categories } from "./components/categories/Categories";
 import { CreateProduct } from "./components/createProduct/CreateProduct";
-import { Inventory } from "./components/inventory/Inventory";
 import { Start } from "./components/start/Start";
-import { ArrowListIcon, BoxPlusIcon, ChartDownIcon, CheckIcon, EmployeeIcons, HomeIcon, ShoppingCartIcon } from "./icons";
+import {
+  ArrowListIcon,
+  BoxPlusIcon,
+  ChartDownIcon,
+  CheckIcon,
+  EmployeeIcons,
+  HomeIcon,
+  ShoppingCartIcon
+} from "./icons";
 import { TabLayout } from "./layouts/TabLayout";
 
 export const options = [
@@ -12,12 +20,13 @@ export const options = [
   },
   {
     key: "inventory",
-    title: <TabLayout icon={<ShoppingCartIcon />} text="Inventario" />,
-    element: <Inventory />
+    title: <TabLayout icon={<ShoppingCartIcon />} text="Inventario" />
+    //element: <Inventory />
   },
   {
     key: "categoria",
-    title: <TabLayout icon={<ArrowListIcon />} text="Categoria" />
+    title: <TabLayout icon={<ArrowListIcon />} text="Categoria" />,
+    element: <Categories />
   },
   {
     key: "agregar",
@@ -27,6 +36,7 @@ export const options = [
   {
     key: "stock",
     title: <TabLayout icon={<ChartDownIcon />} text="Stock Bajo" />
+    //element: <LowStock />
   },
   {
     key: "disponibilidad",
@@ -36,4 +46,4 @@ export const options = [
     key: "empleados",
     title: <TabLayout icon={<EmployeeIcons />} text="Empleados" />
   }
-]
+];
