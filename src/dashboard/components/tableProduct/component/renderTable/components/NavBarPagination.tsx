@@ -6,6 +6,10 @@ interface Props extends Omit<Paging, "totalElements" | "size"> {
 }
 
 export const NavBarPagination = ({ totalPages, numberPage, goToPage }: Props) => {
+  const showBar = totalPages < 2;
+
+  if (showBar) return <span></span>
+
   return (
     <div className="flex w-full justify-center">
       <Pagination
