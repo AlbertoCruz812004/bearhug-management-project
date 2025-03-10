@@ -20,6 +20,7 @@ export async function countLow() {
   const { count, error } = await supabase
     .from('product')
     .select('id', { count: 'exact' })
+    .lt("quantity_in_stock", 10)
 
   if (error) throw new Error(error.message)
 

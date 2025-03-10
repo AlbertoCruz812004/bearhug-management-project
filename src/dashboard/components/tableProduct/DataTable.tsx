@@ -21,10 +21,6 @@ export const DataTable = <T extends Record<string, unknown>>({
     countData
   );
 
-  if (!sorting?.items || sorting.items.length === 0) {
-    return <Loading />;
-  }
-
   return (
     <Table
       {...TableProperties}
@@ -41,7 +37,11 @@ export const DataTable = <T extends Record<string, unknown>>({
       <TableHeader columns={columns}>
         {column => <TableColumn allowsSorting key={column.key}>{column.label}</TableColumn>}
       </TableHeader>
-      <TableBody items={sorting.items}>
+      <TableBody
+        items={sorting.items}
+        isLoading={!sorting?.items || sorting.items.length === 0}
+        loadingContent={<Loading />}
+      >
         {(item) => (
           <TableRow key={item.id as any}>
             {(columnKey) => <TableCell>{getKeyValue(item, columnKey)}</TableCell>}
