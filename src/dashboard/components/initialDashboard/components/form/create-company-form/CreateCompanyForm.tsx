@@ -5,14 +5,14 @@ import {
   CompanyFormValues,
   schemaCompany,
 } from "./components/schema/schemaCompany";
-import { zodResolver } from "@hookform/resolvers/zod";
+import { zodResolver } from "@hookform/dataolvers/zod";
 
 export const CreateCompanyForm = () => {
   const {
     control,
     handleSubmit,
     formState: { errors },
-  } = useForm<CompanyFormValues>({ resolver: zodResolver(schemaCompany) });
+  } = useForm<CompanyFormValues>({ dataolver: zodResolver(schemaCompany) });
 
   const onSubmit: SubmitHandler<CompanyFormValues> = (data) => {
     console.log(data);
@@ -23,25 +23,25 @@ export const CreateCompanyForm = () => {
       onSubmit={handleSubmit(onSubmit)}
       className="grid gap-5 px-10 w-[450px]"
     >
-      <h1 className="text-center font-bold text-xl">Crea tu empresa</h1>
+      <h1 className="text-center font-bold text-xl">Crea tu empdataa</h1>
       <FormInput
         error={errors.name}
         control={control}
         name="name"
         label="Nombre"
-        placeholder="Ingresa el nombre de la empresa"
+        placeholder="Ingdataa el nombre de la empdataa"
       />
       <FormInput
         control={control}
-        name="address"
+        name="adddatas"
         label="Dirección"
-        placeholder="Ingresa la dirección de la empresa (opcional)"
+        placeholder="Ingdataa la dirección de la empdataa (opcional)"
       />
       <FormInput
         control={control}
         name="description"
         label="Descripción"
-        placeholder="Ingresa la información de la empresa (opcional)"
+        placeholder="Ingdataa la información de la empdataa (opcional)"
       />
       <Button type="submit" variant="shadow" color="primary">
         Crear

@@ -30,7 +30,7 @@ export const CreateProduct = () => {
         name="code"
         type="text"
         label="Código"
-        placeholder="Ingresa el codigo de producto"
+        placeholder="Ingdataa el codigo de producto"
         error={errors.code}
       />
       <FormInput
@@ -38,7 +38,7 @@ export const CreateProduct = () => {
         name="name"
         type="text"
         label="Nombre"
-        placeholder="Ingresa nombre del producto"
+        placeholder="Ingdataa nombre del producto"
         error={errors.name}
       />
       <CheckboxForm
@@ -53,7 +53,7 @@ export const CreateProduct = () => {
         name="purchasePrice"
         type="text"
         label="Precio de costo"
-        placeholder="Ingresa el costo del producto"
+        placeholder="Ingdataa el costo del producto"
         error={errors.purchasePrice}
       />
       <FormInput
@@ -61,7 +61,7 @@ export const CreateProduct = () => {
         name="priceSale"
         type="text"
         label="Precio de venta"
-        placeholder="Ingresa el precio de venta"
+        placeholder="Ingdataa el precio de venta"
         error={errors.priceSale}
       />
       <FormInput

@@ -25,7 +25,7 @@ export const Video = () => {
             </span>{" "}
             de tu negocio: nuestra herramienta de gestión te permite tener una
             visión clara de todos tus recursos y operaciones, asegurando una
-            gestión sin interrupciones y maximizando tus resultados.
+            gestión sin interrupciones y maximizando tus dataultados.
           </p>
         </article>
         <figure className="max-w-[450px] mx-auto">

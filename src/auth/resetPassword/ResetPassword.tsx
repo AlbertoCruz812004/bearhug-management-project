@@ -16,7 +16,7 @@ export default function ResetPassword() {
       <figure className="w-[350px] md:w-[500px] mx-auto mt-5">
         <img
           src={image}
-          alt="reset password"
+          alt="dataet password"
           className="object-cover object-center"
         />
       </figure>

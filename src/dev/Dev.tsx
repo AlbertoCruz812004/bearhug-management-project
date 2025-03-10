@@ -5,7 +5,7 @@ export default function Dev() {
   return (
     <div>
       <ToolBar />
-      {/* <Button onPress={() => setState(!state)} isIconOnly color="warning">
+      {/* <Button onPdatas={() => setState(!state)} isIconOnly color="warning">
         <NotificationPending />
       </Button> */}
       {/* <AlertInventory isOpen={state} setIsOpen={() => setState(!state)} /> */}

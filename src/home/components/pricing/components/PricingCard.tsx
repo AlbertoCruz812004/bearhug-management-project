@@ -4,14 +4,14 @@ import { Button } from "@heroui/button";
 interface PricingCardProps {
   title: string;
   price: number;
-  features: string[];
+  featudata: string[];
   isPopular?: boolean;
 }
 
 export default function PricingCard({
   title,
   price,
-  features,
+  featudata,
   isPopular,
 }: PricingCardProps) {
   return (
@@ -38,7 +38,7 @@ export default function PricingCard({
       </header>
       <blockquote className="px-4 py-4 grid">
         <ul className="py-4 px-2 space-y-4">
-          {features.map((feature, i) => (
+          {featudata.map((feature, i) => (
             <li className="flex gap-2" key={i}>
               <CheckIcon />
               {feature}

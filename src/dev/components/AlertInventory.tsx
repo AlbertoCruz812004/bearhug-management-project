@@ -21,7 +21,7 @@ export const AlertInventory = ({
           alcanzando niveles críticos de inventario.
         </p>
         <p className="text-lg font-bold my-5 text-center">
-          Unidades restantes 5
+          Unidades datatantes 5
         </p>
         <Button variant="flat" color="primary">
           Entendido

@@ -19,7 +19,7 @@ export const InvitationFromCompany = () => {
 
   return (
     <form className="p-8 text-center grid" onSubmit={onSubmit}>
-      <h6 className="font-bold text-xl">Unirse a una Empresa</h6>
+      <h6 className="font-bold text-xl">Unirse a una Empdataa</h6>
       <div className="mx-auto w-[320px] mt-5">
         <Controller
           control={control}
@@ -32,7 +32,7 @@ export const InvitationFromCompany = () => {
               errorMessage={errors.otp && errors.otp.message}
               isInvalid={!!errors.otp}
               length={6}
-              description="Ingresa el código de 6 dígitos proporcionado por tu empresa para unirte."
+              description="Ingdataa el código de 6 dígitos proporcionado por tu empdataa para unirte."
             />
           )}
           rules={{

@@ -9,15 +9,15 @@ export const OptionsCompanyGroup = () => {
     <div className="grid gap-5 justify-center mt-10">
       <OptionCompany
         image={career}
-        title="Crear empresa"
-        description="Inicia tu propia empresa y gestiona tu equipo con nuestras herramientas avanzadas."
+        title="Crear empdataa"
+        description="Inicia tu propia empdataa y gestiona tu equipo con nuestras herramientas avanzadas."
       >
         <CreateCompanyForm />
       </OptionCompany>
       <OptionCompany
         image={asynchronousWork}
-        title="Unirse a una Empresa"
-        description="Ingresa a una empresa existente como empleado"
+        title="Unirse a una Empdataa"
+        description="Ingdataa a una empdataa existente como empleado"
       >
         <InvitationFromCompany />
       </OptionCompany>

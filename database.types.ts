@@ -12,27 +12,60 @@ export type Database = {
       category: {
         Row: {
           description: string | null
-          id: number
+          id: string
           name_category: string
         }
         Insert: {
           description?: string | null
-          id?: number
+          id?: string
           name_category: string
         }
         Update: {
           description?: string | null
-          id?: number
+          id?: string
           name_category?: string
+        }
+        Relationships: []
+      }
+      employee: {
+        Row: {
+          email: string
+          first_name: string
+          hire_date: string | null
+          id: number
+          last_name: string
+          phone: string | null
+          position: string | null
+          salary: number | null
+        }
+        Insert: {
+          email: string
+          first_name: string
+          hire_date?: string | null
+          id?: number
+          last_name: string
+          phone?: string | null
+          position?: string | null
+          salary?: number | null
+        }
+        Update: {
+          email?: string
+          first_name?: string
+          hire_date?: string | null
+          id?: number
+          last_name?: string
+          phone?: string | null
+          position?: string | null
+          salary?: number | null
         }
         Relationships: []
       }
       product: {
         Row: {
           barcode: string
-          category_id: number | null
+          category_id: string
           description: string | null
-          id: number
+          id: string
           maximum_quantity_in_stock: number | null
           minimum_quantity_in_stock: number | null
           name: string
@@ -43,9 +76,9 @@ export type Database = {
         }
         Insert: {
           barcode: string
-          category_id?: number | null
+          category_id: string
           description?: string | null
-          id?: number
+          id?: string
           maximum_quantity_in_stock?: number | null
           minimum_quantity_in_stock?: number | null
           name: string
@@ -56,9 +89,9 @@ export type Database = {
         }
         Update: {
           barcode?: string
-          category_id?: number | null
+          category_id?: string
           description?: string | null
-          id?: number
+          id?: string
           maximum_quantity_in_stock?: number | null
           minimum_quantity_in_stock?: number | null
           name?: string

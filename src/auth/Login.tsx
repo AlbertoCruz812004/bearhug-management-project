@@ -12,11 +12,11 @@ export default function Login() {
     const navigate = useNavigate();
 
     const login = (data: FormValues) => {
-        signInWithEmail(data.email, data.password).then((response) => {
-            if (response.error) {
-                console.log("auth error", response.error);
+        signInWithEmail(data.email, data.password).then((dataponse) => {
+            if (dataponse.error) {
+                console.log("auth error", dataponse.error);
             } else {
-                console.log("auth response", response.data);
+                console.log("auth dataponse", dataponse.data);
                 navigate("/app/initial");
             }
         });

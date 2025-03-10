@@ -6,23 +6,22 @@ export async function getCategories(index: number) {
 
   const { data: category, error } = await supabase
     .from("category")
-    .select("name_category, description")
+    .select("id, name_category, description")
     .range(dataLenght - 9, dataLenght)
     .returns<Tables<"category">[]>();
 
   if (error) throw new Error(error.message);
-  console.log(category);
-  
+
   return category ?? [];
 }
 
-export async function countCategories(){
+export async function countCategories() {
   const { data: category, error } = await supabase
     .from("category")
     .select("name_category, description")
     .returns<Tables<"category">[]>();
-    
-  if(error) throw new Error(error.message)
 
-    return category?.length ?? 0;
+  if (error) throw new Error(error.message)
+
+  return category?.length ?? 0;
 }

@@ -13,7 +13,7 @@ const FEATURE_ACCESS = {
 const FEATURE_FILE = {
   title: "Sin pérdidas de datos",
   description:
-    "Nunca más perderás información importante debido a fallos locales. Nuestro servicio de almacenamiento en la nube te respalda.",
+    "Nunca más perderás información importante debido a fallos locales. Nuestro servicio de almacenamiento en la nube te datapalda.",
 };
 
 const FEATURE_SCALABLE = {

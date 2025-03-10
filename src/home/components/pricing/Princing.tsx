@@ -12,7 +12,7 @@ export const Princing = () => {
         {plans.map((plan) => (
           <PricingCard
             key={plan.title}
-            features={plan.features}
+            featudata={plan.featudata}
             isPopular={plan.isPopular}
             price={plan.price}
             title={plan.title}

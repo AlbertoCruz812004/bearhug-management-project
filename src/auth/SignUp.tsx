@@ -17,11 +17,11 @@ export default function SignUp() {
   const signUp = (data: FormValues) => {
     setSendEmail(true);
     signUpNewUser(data.email, data.password)
-      .then((response) => {
-        if (response.error) {
-          console.log(response.error);
+      .then((dataponse) => {
+        if (dataponse.error) {
+          console.log(dataponse.error);
         } else {
-          const dataResponse: DataType = response.data;
+          const dataResponse: DataType = dataponse.data;
           console.log(dataResponse);
           setEmail(dataResponse.user?.email ?? "username");
         }

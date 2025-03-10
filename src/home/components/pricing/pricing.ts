@@ -1,29 +1,29 @@
-const features = [ "5Gb de almacenamiento", "5Gb de almacenamiento","5Gb de almacenamiento", "5Gb de almacenamiento", "5Gb de almacenamiento", "5Gb de almacenamiento"]
+const featudata = [ "5Gb de almacenamiento", "5Gb de almacenamiento","5Gb de almacenamiento", "5Gb de almacenamiento", "5Gb de almacenamiento", "5Gb de almacenamiento"]
 
 type Plan = {
     title: string
     price: number
-    features: string[]
+    featudata: string[]
     isPopular?: boolean
 }
 
 const BASIC_PLAN: Plan = {
     title: "Plan básico",
     price: 10,
-    features: features
+    featudata: featudata
 }
 
 const PROFESIONAL_PLAN: Plan = {
     title: "Plan profesional",
     price: 15,
-    features: features,
+    featudata: featudata,
     isPopular: true
 }
 
 const ULTIMATE_PLAN: Plan = {
     title: "Plan ultimate",
     price: 18,
-    features: features
+    featudata: featudata
 }
 
 export const plans = [BASIC_PLAN, PROFESIONAL_PLAN, ULTIMATE_PLAN]

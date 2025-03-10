@@ -1,24 +1,5 @@
 import { useEffect, useState } from "react";
-
-interface Paging {
-  size: number;
-  totalElements: number;
-  totalPages: number;
-  numberPage: number;
-}
-
-type Data<T> = T[] | undefined;
-
-interface Result<T> {
-  data: Data<T>;
-  paging: Paging;
-  goToPage: (newPage: number) => void;
-}
-
-interface Props<T> {
-  fetchData: (index: number) => Promise<Data<T>>;
-  countData: () => Promise<number>;
-}
+import { ResultPaging, Paging } from "./types/paginationType";
 
 const initialPage = {
   totalElements: 0,
@@ -27,12 +8,12 @@ const initialPage = {
   numberPage: 1
 };
 
-export default function usePagination<T>({
-  fetchData,
-  countData
-}: Props<T>): Result<T> {
+export default function usePagination<T>(
+  fetchData: (index: number) => Promise<T[]>,
+  countData: () => Promise<number>
+): ResultPaging<T> {
   const [page, setPage] = useState<Paging>(initialPage);
-  const [data, setData] = useState<Data<T>>();
+  const [data, setData] = useState<Array<T>>([]);
   const [numberPage, setNumberPage] = useState(1);
 
   useEffect(

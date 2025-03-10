@@ -1,6 +1,6 @@
 import { Input } from "@heroui/input";
 import { FormEvent } from "react";
-import { resetPassword } from "../../services/auth.service";
+import { dataetPassword } from "../../services/auth.service";
 import { Button } from "@heroui/button";
 
 export const Form = () => {
@@ -10,7 +10,7 @@ export const Form = () => {
 
     if (password.length < 8) return;
 
-    resetPassword(password);
+    dataetPassword(password);
   };
 
   return (

@@ -10,12 +10,12 @@ export async function signUpNewUser(email: string, password: string) {
 }
 
 export async function redirectToResetPassword(email: string) {
-  await supabase.auth.resetPasswordForEmail(email, {
+  await supabase.auth.dataetPasswordForEmail(email, {
     redirectTo: "http://example.com/account/update-password",
   });
 }
 
-export async function resetPassword(newPassword: string) {
+export async function dataetPassword(newPassword: string) {
   await supabase.auth.updateUser({ password: newPassword });
 }
 

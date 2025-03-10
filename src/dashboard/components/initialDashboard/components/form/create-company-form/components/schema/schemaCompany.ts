@@ -2,7 +2,7 @@ import { z } from "zod";
 
 export const schemaCompany = z.object({
   name: z.string().min(1, "El nombre es requerido"),
-  address: z.string().default("sin dirección"),
+  adddatas: z.string().default("sin dirección"),
   description: z.string().default("sin descripción"),
 });
 

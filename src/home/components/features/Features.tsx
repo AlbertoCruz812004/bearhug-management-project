@@ -4,7 +4,7 @@ import { FEATURES } from "./feature";
 import { Icons } from "./icons";
 import { motion } from "framer-motion";
 
-export const Features = () => {
+export const Featudata = () => {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {

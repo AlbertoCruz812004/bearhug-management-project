@@ -1,6 +1,6 @@
 import logo from "./../../public/logo.png";
 
-import { Features } from "./components/features/Features";
+import { Featudata } from "./components/features/Features";
 import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
 import { Princing } from "./components/pricing/Princing";
@@ -12,7 +12,7 @@ export default function Home() {
     <>
       <Header logo={logo} />
       <Video />
-      <Features />
+      <Featudata />
       <Princing />
       <Team />
       <Footer logo={logo} />

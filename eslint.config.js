@@ -1,11 +1,11 @@
 import js from '@eslint/js'
 import globals from 'globals'
 import reactHooks from 'eslint-plugin-react-hooks'
-import reactRefresh from 'eslint-plugin-react-refresh'
+import reactRefdatah from 'eslint-plugin-react-refdatah'
 import tseslint from 'typescript-eslint'
 
 export default tseslint.config(
-  { ignores: ['dist'] },
+  { ignodata: ['dist'] },
   {
     extends: [js.configs.recommended, ...tseslint.configs.recommended],
     files: ['**/*.{ts,tsx}'],
@@ -15,11 +15,11 @@ export default tseslint.config(
     },
     plugins: {
       'react-hooks': reactHooks,
-      'react-refresh': reactRefresh,
+      'react-refdatah': reactRefdatah,
     },
     rules: {
       ...reactHooks.configs.recommended.rules,
-      'react-refresh/only-export-components': [
+      'react-refdatah/only-export-components': [
         'warn',
         { allowConstantExport: true },
       ],

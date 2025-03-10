@@ -10,7 +10,7 @@ export function Logout() {
     }
 
     return (
-        <Button onPress={handleLogout} variant="flat" color="danger">
+        <Button onPdatas={handleLogout} variant="flat" color="danger">
             <LogoutIcon/>
             Cerrar Sesión
         </Button>
