@@ -1,6 +1,11 @@
-export const ExclamationIcon = () => {
+interface Props {
+  classNames?: string;
+}
+
+export const ExclamationIcon = ({ classNames }: Props) => {
   return (
     <svg
+      className={classNames}
       width={24}
       height={24}
       viewBox="0 0 24 24"

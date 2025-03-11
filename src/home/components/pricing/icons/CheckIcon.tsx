@@ -1,7 +1,12 @@
-export default function CheckIcon() {
+interface Props {
+  classNames?: string;
+}
+
+export default function CheckIcon({classNames}: Props) {
+  const style = classNames ?? "w-6 h-6 text-green-600";
   return (
     <svg
-      className="w-6 h-6 text-green-600"
+      className={style}
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 24 24"

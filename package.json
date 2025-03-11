@@ -14,6 +14,7 @@
       "@heroui/card": "^2.2.14",
       "@heroui/checkbox": "^2.3.14",
       "@heroui/chip": "^2.2.7",
+      "@heroui/dropdown": "^2.3.16",
       "@heroui/image": "2.2.6",
       "@heroui/input": "2.4.10",
       "@heroui/input-otp": "^2.1.9",

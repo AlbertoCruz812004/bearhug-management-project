@@ -1,26 +1,28 @@
-import { Button } from '@heroui/button';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { useForm, SubmitHandler } from 'react-hook-form';
-import CheckboxForm from '../../../../../../../core/components/checkboxForm/CheckboxForm';
-import FormInput from '../../../../../../../core/components/input/InputForm';
-import { ProductValues, productSchema } from './schema/product.schema';
-import { FormSelect } from './components/FormSelect';
-import { useEffect, useState } from 'react';
-import { searchCategory } from '../../insertProduct';
+import { Button } from "@heroui/button";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm, SubmitHandler } from "react-hook-form";
+import CheckboxForm from "../../../../../../../core/components/checkboxForm/CheckboxForm";
+import FormInput from "../../../../../../../core/components/input/InputForm";
+import { ProductValues, productSchema } from "./schema/product.schema";
+import { FormSelect } from "./components/FormSelect";
+import { useEffect, useState } from "react";
+import { searchCategory } from "../../insertProduct";
 
 interface Props {
-  eventForm: (product: ProductValues) => void
+  eventForm: (product: ProductValues) => void;
 }
 
 export const FormProduct = ({ eventForm }: Props) => {
-  const [categories, setCategories] = useState<Array<{ value: string, text: string }>>([])
+  const [categories, setCategories] = useState<
+    Array<{ value: string; text: string }>
+  >([]);
   const { control, handleSubmit, formState: { errors } } = useForm<
     ProductValues
   >({ resolver: zodResolver(productSchema) });
 
   const onSubmit: SubmitHandler<ProductValues> = data => {
     console.log(data);
-    eventForm(data)
+    eventForm(data);
   };
 
   const options = [
@@ -32,9 +34,9 @@ export const FormProduct = ({ eventForm }: Props) => {
   useEffect(() => {
     searchCategory().then(data => {
       console.log(data);
-      setCategories(value => data)
-    })
-  }, [])
+      setCategories(value => data);
+    });
+  }, []);
 
   return (
     <form
@@ -83,7 +85,7 @@ export const FormProduct = ({ eventForm }: Props) => {
       <FormSelect
         control={control}
         error={errors.category}
-        name='category'
+        name="category"
         options={categories}
       />
       <FormInput
@@ -110,6 +112,9 @@ export const FormProduct = ({ eventForm }: Props) => {
         placeholder="Cantidad maxima en existencia"
         error={errors.maxQuantity}
       />
-      <Button color='primary' type="submit">Guardar</Button>
-    </form>)
-}
+      <Button color="primary" type="submit">
+        Guardar
+      </Button>
+    </form>
+  );
+};
