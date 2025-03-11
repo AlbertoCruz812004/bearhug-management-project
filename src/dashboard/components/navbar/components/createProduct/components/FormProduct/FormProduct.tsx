@@ -5,16 +5,15 @@ import CheckboxForm from '../../../../../../../core/components/checkboxForm/Chec
 import FormInput from '../../../../../../../core/components/input/InputForm';
 import { ProductValues, productSchema } from './schema/product.schema';
 import { FormSelect } from './components/FormSelect';
-import { supabase } from '../../../../../../../core/services/supabase.service';
-import { Tables } from '../../../../../../../../database.types';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { searchCategory } from '../../insertProduct';
 
 interface Props {
-  eventForm: (data: ProductValues) => Promise<void>
+  eventForm: (product: ProductValues) => void
 }
 
 export const FormProduct = ({ eventForm }: Props) => {
-  const [categories, setCategories] = useState<string[]>([])
+  const [categories, setCategories] = useState<Array<{ value: string, text: string }>>([])
   const { control, handleSubmit, formState: { errors } } = useForm<
     ProductValues
   >({ resolver: zodResolver(productSchema) });
@@ -30,16 +29,12 @@ export const FormProduct = ({ eventForm }: Props) => {
     { value: "kit", text: "por kit" }
   ];
 
-  const getCategories = async () => {
-    const { data: category } = await supabase
-      .from("category")
-      .select("id")
-      .returns<Tables<"category">[]>()
-
-    return category?.map(item => item.id)
-  }
-
-  getCategories().then(data => setCategories(data ?? []))
+  useEffect(() => {
+    searchCategory().then(data => {
+      console.log(data);
+      setCategories(value => data)
+    })
+  }, [])
 
   return (
     <form
@@ -89,7 +84,7 @@ export const FormProduct = ({ eventForm }: Props) => {
         control={control}
         error={errors.category}
         name='category'
-        options={options}
+        options={categories}
       />
       <FormInput
         control={control}
