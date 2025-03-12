@@ -7,6 +7,7 @@ export async function getProducts(index: number) {
   const { data: product, error } = await supabase
     .from("product")
     .select("id, barcode, name, price_cost, sales_price, wholesale_price, quantity_in_stock")
+    .order("name")
     .range(dataLenght - 9, dataLenght)
     .returns<Tables<"product">[]>();
 

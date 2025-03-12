@@ -77,10 +77,6 @@ export const CircleChart = React.forwardRef<HTMLDivElement, CircleChartProps>(
     },
     ref
   ) => {
-    const handleSelectionChange = (keys: Set<React.Key>) => {
-      onSelectTimeRange?.(Array.from(keys)[0].toString());
-    };
-
     const handleMenuAction = (key: React.Key) => {
       onMenuAction?.(key.toString());
     };

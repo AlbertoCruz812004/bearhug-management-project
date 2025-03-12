@@ -6,13 +6,14 @@ interface props {
   name: string
   label: string,
   error?: FieldError
+  defaultValue?: string,
   options: Array<{
     value: string,
     text: string
   }>
 }
 
-export default function CheckboxForm({ control, name, label, options, error }: props) {
+export default function CheckboxForm({ control, name, label, options, error, defaultValue }: props) {
   return (
     <div>
       <Controller
@@ -23,6 +24,7 @@ export default function CheckboxForm({ control, name, label, options, error }: p
             orientation="horizontal"
             {...field}
             label={label}
+            defaultValue={defaultValue}
             errorMessage={error?.message}
             isInvalid={!!error}
           >

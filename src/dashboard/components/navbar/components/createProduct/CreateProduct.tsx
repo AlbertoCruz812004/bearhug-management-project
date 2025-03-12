@@ -44,13 +44,13 @@ export const CreateProduct = () => {
   };
 
   return (
-    <section className="min-w-[800px] w-[1000px] max-w-[1200]">
+    <section className="min-w-[800px] w-[1000px] max-w-[1200] h-[500px] bg-gray-200 dark:bg-zinc-800 rounded-lg mx-auto p-8">
       <FormProduct eventForm={handleSubmit} />
       <Modal isOpen={!!data} setIsOpen={() => setData(null)} hiddenButtonClose>
         <div className="w-[350px] text-center">
           {
-            data?.status === 200 
-              ? <CheckIcon classNames="mx-auto w-[40px] h-[40px] text-green-600" /> 
+            data?.status === 200
+              ? <CheckIcon classNames="mx-auto w-[40px] h-[40px] text-green-600" />
               : <ExclamationIcon classNames="mx-auto w-[40px] h-[40px] text-danger-400" />
           }
           {!!data &&

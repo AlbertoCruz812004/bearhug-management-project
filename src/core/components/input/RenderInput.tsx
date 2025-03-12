@@ -7,6 +7,8 @@ export interface InputProps {
   placeholder: string;
   error?: FieldError;
   field: any;
+  minLenght?: number,
+  maxLenght?: number
 }
 
 export const RenderInput = ({
@@ -15,6 +17,8 @@ export const RenderInput = ({
   placeholder,
   error,
   type,
+  maxLenght,
+  minLenght
 }: InputProps) => (
   <Input
     isInvalid={!!error}
@@ -25,6 +29,8 @@ export const RenderInput = ({
     radius="md"
     label={label}
     placeholder={placeholder}
+    maxLength={maxLenght}
+    minLength={minLenght}
     classNames={{
       inputWrapper: "border-2 border-blue-600 bg-transparent",
       innerWrapper: "bg-transparent",

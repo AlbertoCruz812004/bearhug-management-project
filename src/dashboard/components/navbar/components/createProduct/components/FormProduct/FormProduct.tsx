@@ -41,7 +41,7 @@ export const FormProduct = ({ eventForm }: Props) => {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="w-[500px] h-[500px] bg-gray-200 dark:bg-zinc-800 rounded-lg mx-auto p-8 grid gap-5 overflow-y-auto scrollbar-hide"
+      className="w-[500px] h-[450px] grid gap-5 overflow-y-auto scrollbar-hide"
     >
       <FormInput
         control={control}
@@ -50,6 +50,7 @@ export const FormProduct = ({ eventForm }: Props) => {
         label="Código"
         placeholder="Ingresa el codigo de producto"
         error={errors.code}
+        maxLenght={15}
       />
       <FormInput
         control={control}
@@ -58,6 +59,7 @@ export const FormProduct = ({ eventForm }: Props) => {
         label="Nombre"
         placeholder="Ingresa nombre del producto"
         error={errors.name}
+        maxLenght={70}
       />
       <CheckboxForm
         control={control}
@@ -65,6 +67,7 @@ export const FormProduct = ({ eventForm }: Props) => {
         options={options}
         error={errors.typeSell}
         label="Se vende por:"
+        defaultValue={options[0].value}
       />
       <FormInput
         control={control}

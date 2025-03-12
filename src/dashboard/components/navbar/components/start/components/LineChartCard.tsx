@@ -58,8 +58,8 @@ export default function LineChartCard() {
   return (
     <Card className="p-2">
       <LineChart
-        width={1100}
-        height={280}
+        width={1000}
+        height={250}
         data={data}
         margin={{
           top: 5,
