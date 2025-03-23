@@ -1,0 +1,75 @@
+* [33m4b7f814[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m correcciones finales
+* [33m65c3eb4[m[33m ([m[1;31morigin/development[m[33m, [m[1;32mdevelopment[m[33m)[m correcciones
+* [33m8b4fdd9[m hasta ahi llegue
+* [33mc49deba[m fix: vuelve opcionales campos en el formulario de productos
+* [33m8275cfe[m fix: mejora estilos de graficas y mensaje de respuesta en la creacion de productos
+* [33m5db79cb[m fix: corrige error de envio de creacion de productos mediante una api
+* [33m489462a[m add: agrega formulario de creacion de productos
+* [33md82ec59[m add: agrega validacion al NavBarPagination si solo hay una pagina
+* [33mc113387[m add: agrega pantalla de carga a DataTable
+* [33md9f36c7[m add: agrega tabla con paginacion y ordenamiento, se encuentran disponibles las secciones de empleados, productos, categorias y productos bajos
+* [33m91c3197[m add: agrega paginacion a la tabla de categorias
+* [33meb391e8[m add: agrega seccion de prueba de graficas, tabla de productos en inventario y generalizacion de usos en el componente Table
+*   [33m0c1a579[m fix: soluciona errores de conflicto en la rama main y la rama development
+[32m|[m[33m\[m  
+[32m|[m * [33mbfb5e35[m fix: corrige error de declaracion de Props en Bar.txt
+[32m|[m * [33m0c64192[m style: cambia el color de fondo del modo oscuro y estilos en la cabezera
+[32m|[m * [33mbf169f4[m fix: soluciona problemas de uso con los formularios de opción
+* [33m|[m [33m80158c0[m add: agrega menu de navegacion dentro del dashboard de la aplicacion
+* [33m|[m [33ma84acce[m[33m ([m[1;31morigin/develop[m[33m, [m[1;32mdevelop[m[33m)[m refactor: mejora la legibilidad del codigo y separa logicas
+* [33m|[m [33m6df8fe3[m add: agrega proteccion a rutas que requiren autenticacion
+* [33m|[m [33m5b5ee4c[m add: agrega funcion de cierre de sesion
+* [33m|[m [33m68d8e62[m refactor: separa la logica de sesion del authProvider a un nuevo funcion 'setupAuthListener'
+* [33m|[m [33mbee4c18[m add: agrega tabla de productos con opcion de ordenamiento decendente o ascendente
+* [33m|[m [33m4e0c3d9[m refactor: mejora la forma en que esta estructurada las rutas de la aplicacion en un array con todas las rutas
+* [33m|[m [33m449ac88[m refactor: permite el uso general en diferentes formularios con el componente FormInput
+* [33m|[m [33m681354b[m add: agrega pagina de not found cuando de entra una ruta no existente
+* [33m|[m [33m7c870af[m refactor: mejora la legibilidad del codigo y separa los componentes más pequeños
+* [33m|[m [33md8c2084[m add: agrega primera del dashboard para la creación de empresa o union
+* [33m|[m [33m5d91467[m add: agrega componente de notificaciones
+* [33m|[m [33m0b24bb4[m add: agrega modales de alerte para productos bajos en inventario. estos se encuentran en la ruta /dev
+[33m|[m[33m/[m  
+* [33m5049685[m refactor: cambia la tipografia por defecto de tailwind por poppins
+* [33m33aa3e1[m add: agrega pantalla de carga durante el redireccionamiento a otra página
+* [33md4f4988[m fix: correccion de posicion de elementos del HeroImage
+* [33mbecb5f4[m fix: elimina importacion no utilizada en el componente Member
+* [33m3333760[m add: agrega animaciones a la pagina de inicial de la aplicacion
+* [33mebb766f[m fix: correccion de nombre de ruta
+* [33m72d1efd[m fix: corrige errores de redireccionamiento en los botones
+* [33m74065d4[m refactor: cambia la forma de redireccionamiento de los botones con Link de HeroUI
+* [33mb991323[m fix: corrige errores de importacion en el componente Form
+* [33m0ed49a9[m add: rueda de carga durante el proceso de envio de los datos del usuario
+* [33m52ef239[m fix: corrige el redireccionamiento del correo del usuario
+* [33m49c1f38[m fix: soluciona error de tipos con la response de supabase
+* [33m23581bb[m add: agrega un popover de aviso de envio de correo de confirmación de correo
+* [33maa395c0[m style: cambio el nombre de los botones de redireccionamiento en las paginas de registro e inicio de sesión
+* [33m13a6bfd[m fix: arregla errores de estilos
+* [33mb2ff668[m refactor: mejora el estilo de la pagina de presentación de la aplicación
+* [33m2b0efd0[m add: agrega funcion de autenticacion en las paginas de login y signup y utiliza un contexto para la verificación de si existe una sesión existente
+* [33m55c6fdd[m add: agrega formulario de registro de usuario mediante correo y contraseña
+* [33m2f01dcb[m refactor: mejora la estructura del proyecto
+* [33m75e269f[m[33m ([m[1;31morigin/refactor[m[33m)[m refactor: improves the folder structure of the project and its components
+* [33m606b32c[m refactor: change the light and dark mode styles
+* [33m4bcb7a4[m fix: fixes a bug in loading tailwind styles
+* [33mad693ac[m refactor: adds an interface for component props
+* [33me1390e9[m refactor: improve the structure of the home page
+* [33me33eb07[m build: change the npm compiler to bun
+* [33mbbf1cab[m add: dashboard product demo
+* [33m001e303[m change: responsive desktop
+* [33m82f6c30[m add: UI auth, function auth
+* [33m055045b[m add: hook authentication
+* [33m1995243[m fix: _redirects error
+* [33m4fa7108[m fix: _redirects
+* [33mdebc614[m add: file _redirects
+* [33m93d6f38[m fix: error path GithubIcon
+* [33m1a36de3[m add: message modal
+* [33mf8a57df[m add: IU auth
+* [33m4e29fa8[m add: images
+* [33ma3693e9[m change: url of page auth
+* [33mad2e833[m add: sign up
+* [33m1bcec10[m logo
+* [33m8d57907[m add: font color
+* [33ma40c83e[m change: eslint
+* [33m756472a[m add: landing page
+* [33m83589e1[m add: section of pricing
+* [33mc9ec216[m add: heroIcon
