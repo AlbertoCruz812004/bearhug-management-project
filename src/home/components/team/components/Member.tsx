@@ -47,7 +47,7 @@ export const Member = ({
           <h6 className="font-bold text-blue-500">{name}</h6>
           <p className="text-gray-500">{rol}</p>
         </div>
-        <p>{description}</p>
+        <p className="text-sm text-center">{description}</p>
         <ul className="flex gap-2 items-center justify-center md:justify-normal">
           <li>
             <a href={socialMediaUrl}>
