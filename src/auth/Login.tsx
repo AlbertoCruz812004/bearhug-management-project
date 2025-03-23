@@ -1,4 +1,3 @@
-import logo from "./../../public/logo.png";
 import { Button } from "@heroui/button";
 import AuthLayout from "./layout/AuthLayout";
 import image from "./images/Authentication.png";
@@ -21,7 +20,7 @@ export default function Login() {
 
   return (
     <>
-      <Bar image={logo}>
+      <Bar>
         <Button
           as={Link}
           href="/auth/signup"

@@ -15,7 +15,7 @@ export const searchCategory = async () => {
 };
 
 export const insertProduct = async (values: Tables<"product">) => {
-  const { data, error } = await supabase
+  const { error } = await supabase
     .from("product")
     .insert([
       {

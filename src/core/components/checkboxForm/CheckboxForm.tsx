@@ -19,7 +19,6 @@ export default function CheckboxForm({
   label,
   options,
   error,
-  defaultValue,
 }: props) {
   return (
     <div>

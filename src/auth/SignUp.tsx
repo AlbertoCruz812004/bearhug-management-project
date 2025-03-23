@@ -1,7 +1,6 @@
 import { Button } from "@heroui/button";
 import { VerifiedEmail } from "./components/verified_email/VerifiedEmail.tsx";
 import AuthLayout from "./layout/AuthLayout";
-import logo from "./../../public/logo.png";
 import image from "./images/Data Cloud.png";
 import { signUpNewUser } from "./services/auth.service";
 import { FormValues } from "./components/form/model/form_schema";
@@ -32,7 +31,7 @@ export default function SignUp() {
   };
   return (
     <>
-      <Bar image={logo}>
+      <Bar>
         <Button
           as={Link}
           href="/auth/login"

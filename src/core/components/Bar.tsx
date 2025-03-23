@@ -2,12 +2,11 @@ import { ReactNode } from "react";
 import { Logo } from "./Logo";
 
 interface Props {
-  image: string;
   children: ReactNode;
   isFixed?: boolean;
 }
 
-export const Bar = ({ image, children, isFixed }: Props) => {
+export const Bar = ({ children, isFixed }: Props) => {
   const style = isFixed ? "top-0 fixed w-full z-50" : "";
 
   return (

@@ -1,12 +1,11 @@
-import { TableBody, TableRow, TableCell, getKeyValue } from "@heroui/table"
-import { UseSortingResults } from "../../../../../../core/hooks/useSorting/useSorting"
+import { TableBody, TableRow, TableCell, getKeyValue } from "@heroui/table";
+import { UseSortingResults } from "../../../../../../core/hooks/useSorting/useSorting";
 
-interface Props<T> {
-  sorting: UseSortingResults<T>
+interface Props {
+  sorting: UseSortingResults<any>;
 }
 
-export const RenderBody = <T extends Record<string, unknown>>({ sorting }: Props<T>) => {
-
+export const RenderBody = ({ sorting }: Props) => {
   return (
     <TableBody items={sorting.items}>
       {(item) => (
@@ -15,5 +14,5 @@ export const RenderBody = <T extends Record<string, unknown>>({ sorting }: Props
         </TableRow>
       )}
     </TableBody>
-  )
-}
+  );
+};

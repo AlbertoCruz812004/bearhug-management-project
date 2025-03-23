@@ -1,12 +1,5 @@
-import { ButtonProps, Button } from "@heroui/button";
+import { ButtonProps } from "@heroui/button";
 import { CardProps, Card } from "@heroui/card";
-import {
-  Dropdown,
-  DropdownTrigger,
-  DropdownMenu,
-  DropdownItem,
-} from "@heroui/dropdown";
-import { Select, SelectItem } from "@heroui/select";
 import { cn } from "@heroui/theme";
 import React from "react";
 import { ResponsiveContainer, PieChart, Pie, Tooltip, Cell } from "recharts";

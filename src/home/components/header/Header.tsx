@@ -3,14 +3,10 @@ import { Bar, DarkModeButton } from "../../../core/components";
 import image from "./images/Chasing Money.png";
 import HeroImage from "./components/HeroImage";
 
-interface Props {
-  logo: string;
-}
-
-export default function Header({ logo }: Props) {
+export default function Header() {
   return (
     <header>
-      <Bar isFixed image={logo}>
+      <Bar isFixed>
         <DarkModeButton />
       </Bar>
       <HeroImage image={image} />

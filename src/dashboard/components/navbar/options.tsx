@@ -8,7 +8,6 @@ import {
   ArrowListIcon,
   BoxPlusIcon,
   ChartDownIcon,
-  CheckIcon,
   EmployeeIcons,
   HomeIcon,
   ShoppingCartIcon,

@@ -33,7 +33,7 @@ export const OptionCompany = ({
       </figure>
       <blockquote className="grid gap-2 w-2/3 p-2">
         <p className="text-sm">{description}</p>
-        <Button onPdatas={handleClick} color="primary" variant="shadow">
+        <Button onPress={handleClick} color="primary" variant="shadow">
           {title}
         </Button>
         <Modal isOpen={isOpen} setIsOpen={setIsOpen}>

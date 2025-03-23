@@ -16,11 +16,13 @@ export const FormProduct = ({ eventForm }: Props) => {
   const [categories, setCategories] = useState<
     Array<{ value: string; text: string }>
   >([]);
-  const { control, handleSubmit, formState: { errors } } = useForm<
-    ProductValues
-  >({ resolver: zodResolver(productSchema) });
+  const {
+    control,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<ProductValues>({ resolver: zodResolver(productSchema) });
 
-  const onSubmit: SubmitHandler<ProductValues> = data => {
+  const onSubmit: SubmitHandler<ProductValues> = (data) => {
     console.log(data);
     eventForm(data);
   };
@@ -28,13 +30,13 @@ export const FormProduct = ({ eventForm }: Props) => {
   const options = [
     { value: "unit", text: "por unidad" },
     { value: "grammage", text: "por gramos" },
-    { value: "kit", text: "por kit" }
+    { value: "kit", text: "por kit" },
   ];
 
   useEffect(() => {
-    searchCategory().then(data => {
+    searchCategory().then((data) => {
       console.log(data);
-      setCategories(value => data);
+      setCategories(() => data);
     });
   }, []);
 

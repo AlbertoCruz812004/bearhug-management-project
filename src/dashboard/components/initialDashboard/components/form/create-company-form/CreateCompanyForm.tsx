@@ -5,14 +5,14 @@ import {
   CompanyFormValues,
   schemaCompany,
 } from "./components/schema/schemaCompany";
-import { zodResolver } from "@hookform/dataolvers/zod";
+import { zodResolver } from "@hookform/resolvers/zod";
 
 export const CreateCompanyForm = () => {
   const {
     control,
     handleSubmit,
     formState: { errors },
-  } = useForm<CompanyFormValues>({ dataolver: zodResolver(schemaCompany) });
+  } = useForm<CompanyFormValues>({ resolver: zodResolver(schemaCompany) });
 
   const onSubmit: SubmitHandler<CompanyFormValues> = (data) => {
     console.log(data);

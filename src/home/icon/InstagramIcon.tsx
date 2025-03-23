@@ -4,7 +4,7 @@ export const InstagramIcon = () => {
       xmlns="http://www.w3.org/2000/svg"
       width="1.3em"
       height="1.3em"
-      pdataerveAspectRatio="xMidYMid"
+      preserveAspectRatio="xMidYMid"
       viewBox="0 0 256 256"
     >
       <path

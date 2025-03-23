@@ -12,7 +12,7 @@ export const NotificationBase = ({
   <>
     <Button
       size={sizeButton}
-      onPdatas={notify}
+      onPress={notify}
       color={colorButton}
       isIconOnly={isIconOnly}
     >

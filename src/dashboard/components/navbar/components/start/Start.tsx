@@ -1,6 +1,4 @@
-import { CircleChart } from "./components/ChartHeroUi";
 import Component from "./components/CircleChart";
-import LineChartCard from "./components/LineChartCard";
 import { SimpleLineChart } from "./components/SimpleLineChart";
 
 export const Start = () => {

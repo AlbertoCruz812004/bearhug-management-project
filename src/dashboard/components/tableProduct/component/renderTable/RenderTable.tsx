@@ -1,15 +1,14 @@
-import { Table, TableProps } from "@heroui/table"
-import { Paging } from "../../../../../core/hooks/usePagination/types/paginationType"
-import { UseSortingResults } from "../../../../../core/hooks/useSorting/useSorting"
-import { NavBarPagination } from "./components/NavBarPagination"
-import { RenderBody } from "./components/RenderBody"
-import { RenderHeader, RenderHeaderProps } from "./components/RenderHeader"
+import { Table, TableProps } from "@heroui/table";
+import { Paging } from "../../../../../core/hooks/usePagination/types/paginationType";
+import { UseSortingResults } from "../../../../../core/hooks/useSorting/useSorting";
+import { NavBarPagination } from "./components/NavBarPagination";
+import { RenderBody } from "./components/RenderBody";
+import { RenderHeader, RenderHeaderProps } from "./components/RenderHeader";
 
 interface Props<T> extends RenderHeaderProps {
-  sorting: UseSortingResults<T>
-  paging: Paging
-  goToPage: (index: number) => void
-  generateKey: (item: T) => string | number
+  sorting: UseSortingResults<T>;
+  paging: Paging;
+  goToPage: (index: number) => void;
 }
 
 export const RenderTable = <T,>({
@@ -17,7 +16,6 @@ export const RenderTable = <T,>({
   paging,
   columns,
   goToPage,
-  generateKey
 }: Props<T>) => {
   console.log("renderizando");
   return (
@@ -34,11 +32,10 @@ export const RenderTable = <T,>({
       }
     >
       <RenderHeader columns={columns} />
-      <RenderBody<T> items={sorting.items} generateKey={generateKey} />
-    </Table >
-  )
-
-}
+      {RenderBody({ sorting: sorting })}
+    </Table>
+  );
+};
 
 const TableProperties: TableProps = {
   isStriped: true,
@@ -46,6 +43,6 @@ const TableProperties: TableProps = {
   selectionMode: "single",
   "aria-label": "Example table with client side pagination",
   classNames: {
-    wrapper: "h-[500px]"
-  }
-}
+    wrapper: "h-[500px]",
+  },
+};

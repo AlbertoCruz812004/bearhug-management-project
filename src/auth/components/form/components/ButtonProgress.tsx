@@ -1,5 +1,5 @@
 import { Popover, PopoverContent, PopoverTrigger } from "@heroui/popover";
-import { CircularProgdatas } from "@heroui/progdatas";
+import { CircularProgress } from "@heroui/progress";
 
 interface Props {
   loading: boolean;
@@ -12,7 +12,7 @@ export const ButtonProgdatas = ({ loading }: Props) => {
         <label></label>
       </PopoverTrigger>
       <PopoverContent>
-        <CircularProgdatas />
+        <CircularProgress />
       </PopoverContent>
     </Popover>
   );

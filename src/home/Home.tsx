@@ -10,7 +10,7 @@ import { Video } from "./components/video/Video";
 export default function Home() {
   return (
     <>
-      <Header logo={logo} />
+      <Header />
       <Video />
       <Featudata />
       <Princing />

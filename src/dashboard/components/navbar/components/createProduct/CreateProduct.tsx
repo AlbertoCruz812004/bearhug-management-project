@@ -4,9 +4,7 @@ import { ProductValues } from "./components/FormProduct/schema/product.schema.js
 import Modal from "../../../../../core/components/Modal.js";
 import CheckIcon from "../../../../../home/components/pricing/icons/CheckIcon.js";
 import { ExclamationIcon } from "../../../../../dev/icons/ExclamationIcon.js";
-import { supabase } from "../../../../../core/services/supabase.service.js";
 import { insertProduct } from "./insertProduct.js";
-import { Tables } from "../../../../../../database.types.js";
 
 interface Response {
   status: number;
