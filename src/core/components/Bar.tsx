@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import { Logo } from "./Logo";
 
 interface Props {
   image: string;
@@ -11,19 +12,9 @@ export const Bar = ({ image, children, isFixed }: Props) => {
 
   return (
     <header
-      className={`h-[10svh] ${style} bg-black flex items-center justify-between px-3`}    >
-      <figure className="flex items-center gap-2">
-        <img
-          src={image}
-          alt="logo"
-          className="object-cover object-center"
-          width={50}
-          height={50}
-        />
-        <p className="hidden text-white lg:inline font-bold">
-          Bearhug Management
-        </p>
-      </figure>
+      className={`h-[10svh] ${style} bg-black flex items-center justify-between px-3`}
+    >
+      <Logo />
       <div className="flex items-center gap-2">{children}</div>
     </header>
   );

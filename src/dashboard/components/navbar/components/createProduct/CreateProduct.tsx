@@ -4,11 +4,13 @@ import { ProductValues } from "./components/FormProduct/schema/product.schema.js
 import Modal from "../../../../../core/components/Modal.js";
 import CheckIcon from "../../../../../home/components/pricing/icons/CheckIcon.js";
 import { ExclamationIcon } from "../../../../../dev/icons/ExclamationIcon.js";
+import { supabase } from "../../../../../core/services/supabase.service.js";
+import { insertProduct } from "./insertProduct.js";
+import { Tables } from "../../../../../../database.types.js";
 
 interface Response {
   status: number;
   message: string;
-  error?: string;
 }
 
 export const CreateProduct = () => {
@@ -24,39 +26,35 @@ export const CreateProduct = () => {
       category_id: product.category,
       quantity_in_stock: product.quantity,
       maximum_quantity_in_stock: product.maxQuantity,
-      minimum_quantity_in_stock: product.minQuantity
+      minimum_quantity_in_stock: product.minQuantity,
     };
     console.log(values);
-
-    fetch("http://localhost:3000/insert-product", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json" // Asegúrate de incluir este header
-      },
-      body: JSON.stringify(values)
-    })
-      .then(res => res.json())
-      .then(json => {
-        console.log(json);
-        setData(json);
-      })
-      .catch(error => console.log(error));
+    insertProduct(values as any).then((res) =>
+      setData({ message: res.messages, status: res.status })
+    );
   };
 
   return (
     <section className="min-w-[800px] w-[1000px] max-w-[1200] h-[500px] bg-gray-200 dark:bg-zinc-800 rounded-lg mx-auto p-8">
       <FormProduct eventForm={handleSubmit} />
-      <Modal isOpen={!!data} setIsOpen={() => setData(null)} hiddenButtonClose>
+      <Modal isOpen={!!data} setIsOpen={() => setData(null)}>
         <div className="w-[350px] text-center">
-          {
-            data?.status === 200
-              ? <CheckIcon classNames="mx-auto w-[40px] h-[40px] text-green-600" />
-              : <ExclamationIcon classNames="mx-auto w-[40px] h-[40px] text-danger-400" />
-          }
-          {!!data &&
-            <p className={data?.status === 200 ? "text-primary-400 mt-5" : "text-danger-400 mt-5"}>
+          {data?.status === 200 ? (
+            <CheckIcon classNames="mx-auto w-[40px] h-[40px] text-green-600" />
+          ) : (
+            <ExclamationIcon classNames="mx-auto w-[40px] h-[40px] text-danger-400" />
+          )}
+          {!!data && (
+            <p
+              className={
+                data?.status === 200
+                  ? "text-primary-400 mt-5"
+                  : "text-danger-400 mt-5"
+              }
+            >
               {data.message}
-            </p>}
+            </p>
+          )}
         </div>
       </Modal>
     </section>

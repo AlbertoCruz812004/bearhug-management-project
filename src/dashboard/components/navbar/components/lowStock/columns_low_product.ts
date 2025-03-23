@@ -1,14 +1,14 @@
 export const COLUMNS_LOW_PRODUCT = [
   {
     key: "barcode",
-    label: "CÓDIGO"
+    label: "CÓDIGO",
   },
   {
     key: "name",
-    label: "NOMBRE"
+    label: "NOMBRE",
   },
   {
     key: "quantity_in_stock",
-    label: "existencias"
-  }
+    label: "EXISTENCIAS",
+  },
 ];

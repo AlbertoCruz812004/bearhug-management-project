@@ -7,7 +7,7 @@ export async function getProductsLow(index: number) {
   const { data: product, error } = await supabase
     .from("product")
     .select("id, barcode, name, quantity_in_stock")
-    .lt("quantity_in_stock", 10)
+    .lt("minimum_quantity_in_stock", 100)
     .range(dataLenght - 9, dataLenght)
     .returns<Tables<"product">[]>();
 
@@ -18,11 +18,11 @@ export async function getProductsLow(index: number) {
 
 export async function countLow() {
   const { count, error } = await supabase
-    .from('product')
-    .select('id', { count: 'exact' })
-    .lt("quantity_in_stock", 10)
+    .from("product")
+    .select("id", { count: "exact" })
+    .lt("quantity_in_stock", 10);
 
-  if (error) throw new Error(error.message)
+  if (error) throw new Error(error.message);
 
-  return count ?? 0
+  return count ?? 0;
 }

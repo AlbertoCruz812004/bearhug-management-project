@@ -6,7 +6,7 @@ export const DarkModeButton = () => {
   const { isDarkTheme, toggleTheme } = useThemeContext();
 
   return (
-    <Button size="sm" isIconOnly color="primary" onPdatas={toggleTheme}>
+    <Button size="sm" isIconOnly color="primary" onPress={toggleTheme}>
       {isDarkTheme ? <MoonIcon /> : <SunIcon />}
     </Button>
   );

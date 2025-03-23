@@ -67,7 +67,7 @@ export default function Modal({
               color="danger"
               radius="full"
               isIconOnly
-              onPdatas={closeModal}
+              onPress={closeModal}
               className="absolute top-2 left-2"
             >
               <CloseIcon />

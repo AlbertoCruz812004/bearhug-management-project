@@ -40,7 +40,7 @@ export default function SignUp() {
           color="primary"
           variant="ghost"
         >
-          registrate
+          inicia sesión
         </Button>
         <DarkModeButton />
       </Bar>

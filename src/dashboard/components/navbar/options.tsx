@@ -11,7 +11,7 @@ import {
   CheckIcon,
   EmployeeIcons,
   HomeIcon,
-  ShoppingCartIcon
+  ShoppingCartIcon,
 } from "./icons";
 import { TabLayout } from "./layouts/TabLayout";
 
@@ -19,35 +19,31 @@ export const options = [
   {
     key: "inicio",
     title: <TabLayout icon={<HomeIcon />} text="Inicio" />,
-    element: <Start />
+    element: <Start />,
   },
   {
     key: "inventory",
     title: <TabLayout icon={<ShoppingCartIcon />} text="Inventario" />,
-    element: <Inventory />
+    element: <Inventory />,
   },
   {
     key: "categoria",
     title: <TabLayout icon={<ArrowListIcon />} text="Categoria" />,
-    element: <Categories />
+    element: <Categories />,
   },
   {
     key: "agregar",
     title: <TabLayout icon={<BoxPlusIcon />} text="Agregar Producto" />,
-    element: <CreateProduct />
+    element: <CreateProduct />,
   },
   {
     key: "stock",
     title: <TabLayout icon={<ChartDownIcon />} text="Stock Bajo" />,
-    element: <LowStock />
-  },
-  {
-    key: "disponibilidad",
-    title: <TabLayout icon={<CheckIcon />} text="Disponibilidad" />
+    element: <LowStock />,
   },
   {
     key: "empleados",
     title: <TabLayout icon={<EmployeeIcons />} text="Empleados" />,
-    element: <Employee />
-  }
+    element: <Employee />,
+  },
 ];

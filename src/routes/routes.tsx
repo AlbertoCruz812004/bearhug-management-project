@@ -2,7 +2,7 @@ import { RouteObject } from "react-router";
 import { lazy } from "react";
 import Home from "../home/Home.tsx";
 import Dev from "../dev/Dev.tsx";
-import NotFound from "../NotFound.tsx";
+import NotFound from "./NotFound.tsx";
 import PrivateRoute from "./PrivateRoute.tsx";
 
 const Login = lazy(() => import("./../auth/Login.tsx"));
@@ -11,7 +11,10 @@ const ResetPassword = lazy(
   () => import("./../auth/resetPassword/ResetPassword.tsx")
 );
 const Dashboard = lazy(() => import("./../dashboard/Dashboard.tsx"));
-const InitialDashboard = lazy(() => import("./../dashboard/components/initialDashboard/InitialDashboard.tsx"));
+const InitialDashboard = lazy(
+  () =>
+    import("./../dashboard/components/initialDashboard/InitialDashboard.tsx")
+);
 
 export const routes: RouteObject[] = [
   { path: "/", element: <Home /> },
@@ -27,9 +30,23 @@ export const routes: RouteObject[] = [
   {
     path: "/app",
     children: [
-      { path: "initial", element: <PrivateRoute><InitialDashboard /></PrivateRoute> },
-      { path: "dashboard", element: <PrivateRoute><Dashboard /></PrivateRoute> },
-    ]
+      {
+        path: "initial",
+        element: (
+          <PrivateRoute>
+            <InitialDashboard />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "dashboard",
+        element: (
+          <PrivateRoute>
+            <Dashboard />
+          </PrivateRoute>
+        ),
+      },
+    ],
   },
   { path: "*", element: <NotFound /> },
 ];

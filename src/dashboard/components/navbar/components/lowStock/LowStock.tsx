@@ -4,8 +4,7 @@ import { COLUMNS_LOW_PRODUCT } from "./columns_low_product";
 import { countLow, getProductsLow } from "./getProductsLow";
 
 export const LowStock = () => {
-
-  countLow()
+  countLow();
   return (
     <section className="min-w-[800px] w-[1000px] max-w-[1200px]">
       <DataTable<Tables<"product">>

@@ -1,6 +1,6 @@
 import { Button } from "@heroui/button";
 import { Link } from "@heroui/link";
-import image from "./core/images/404_Page_Not_Found.png";
+import image from "./../core/images/404_Page_Not_Found.png";
 import { Image } from "@heroui/image";
 
 export default function NotFound() {
